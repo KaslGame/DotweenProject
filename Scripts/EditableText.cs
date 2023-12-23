@@ -11,12 +11,13 @@ public class EditableText : MonoBehaviour
 
     private Text _text;
     private Tweener _tweener;
+    private float _kAfterTime = 2f;
 
     private void Start()
     {
         _text = GetComponent<Text>();
-        _tweener = _text.DOText("Заменил текст", _duration);
-        _text.DOText("Дополнил текст", _duration).SetRelative().SetDelay(_duration);
-        _text.DOText("Взломал текст", _duration, true, ScrambleMode.All).SetDelay(_duration * 2);
+        _tweener = _text.DOText("Г‡Г Г¬ГҐГ­ГЁГ« ГІГҐГЄГ±ГІ", _duration);
+        _text.DOText("Г„Г®ГЇГ®Г«Г­ГЁГ« ГІГҐГЄГ±ГІ", _duration).SetRelative().SetDelay(_duration);
+        _text.DOText("Г‚Г§Г«Г®Г¬Г Г« ГІГҐГЄГ±ГІ", _duration, true, ScrambleMode.All).SetDelay(_duration * _kAfterTime);
     }
 }
